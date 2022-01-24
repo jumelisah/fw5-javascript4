@@ -20,7 +20,7 @@ const isPalindrom = (letter)=>{
             if(result){
                 resolve(result)
             }else{
-                reject("Error")
+                reject("Data harus STRING")
             }
         }, 1000)
     })
