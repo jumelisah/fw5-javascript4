@@ -24,14 +24,18 @@ const reverseWord = (sentence)=>{
 }
 
 async function balikKalimat(){
-    let kalimat = ''
-    const response = await prompts({
-        type: 'text',
-        name: 'meaning',
-        message: 'Masukkan kalimat : '
-    });
-    kalimat = response.meaning
-    const results = await reverseWord(kalimat)
-    console.log(results)
+    try{
+        let kalimat = ''
+        const response = await prompts({
+            type: 'text',
+            name: 'meaning',
+            message: 'Masukkan kalimat : '
+        });
+        kalimat = response.meaning
+        const results = await reverseWord(kalimat)
+        console.log(results)
+    }catch(err){
+        console.log(err)
+    }
 }
 balikKalimat();
