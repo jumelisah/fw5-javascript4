@@ -17,7 +17,7 @@ const reverseWord = (sentence)=>{
                 }
                 resolve(`Reverse Words : ${reverseWords}`)
             }else{
-                reject("error")
+                reject("Data harus STRING")
             }
         })
     })
