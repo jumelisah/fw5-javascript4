@@ -27,14 +27,18 @@ const isPalindrom = (letter)=>{
 }
 
 async function inputKata(){
-    let kata = ''
-    const response = await prompts({
-        type: 'text',
-        name: 'meaning',
-        message: 'Masukkan kata: '
-    });
-    kata = response.meaning
-    const results = await isPalindrom(kata)
-    console.log(results)
+    try{
+        let kata = ''
+        const response = await prompts({
+            type: 'text',
+            name: 'meaning',
+            message: 'Masukkan kata: '
+        });
+        kata = response.meaning
+        const results = await isPalindrom(kata)
+        console.log(results)
+    }catch(err){
+        console.log(err)
+    }
 }
 inputKata();
